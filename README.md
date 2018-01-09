@@ -17,11 +17,17 @@ The **MarchingSimplex** function receives 8 parameters.
 `MarchingSimplex(n, k, First, Last, Division, Func, filename);`
 
 `n` - The number of dimensions of the function's domain.
+
 `k` - The number of dimensions of the function's codomain.
+
 `First` - An array of size `n` containing the coordinates of the point where we will start dividing the space.
+
 `Last` - An array of size `n` containing the coordinates of the point where we will stop dividing the space.
+
 `Division` - An array containing how many times we will divide the space in each dimension.
+
 `Func` - The function we want to approximate.
+
 `filename` - The file to which we will output the resulting approximation.
 
 This function first divides the space into `n`-dimensional simplexes, from `First` to `Last`, using the `Division` array to chech how many times it will divide in each dimension. Then, it will chech to see if the `Func` crosses each of the simplexes, and approximate it if it does.
@@ -35,12 +41,19 @@ The **ContinuationSimplex** function receives 8 parameters.
 `ContinuationSimplex(n, k, First, Last, Division, FirstPoint, Func, filename);`
 
 `n` - The number of dimensions of the function's domain.
+
 `k` - The number of dimensions of the function's codomain.
+
 `First` - An array of size `n` containing the coordinates of the point where we will start dividing the space.
+
 `Last` - An array of size `n` containing the coordinates of the point where we will stop dividing the space.
+
 `Division` - An array containing how many times we will divide the space in each dimension.
+
 `FirstPoint` - An array containing the coordinates of the first point to be checked.
+
 `Func` - The function we want to approximate. It must receive two parameters: the dimension of its domain and the actual input values.
+
 `filename` - The file to which we will output the resulting approximation.
 
 This function works similarly to the **MarchingSimplex**, except that it requires a `FirstPoint` where `Func` is 0 to start. It then only checks the simplexes to where it knows the function continues to, instead of sweeping the entire space.
