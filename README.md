@@ -12,7 +12,7 @@ There are two functions that can be used to generate the approximation.
 
 ### MarchingSimplex
 
-The **MarchingSimplex** function receives 8 parameters.
+The **MarchingSimplex** function receives 7 parameters.
 
 `MarchingSimplex(n, k, First, Last, Division, Func, filename);`
 
